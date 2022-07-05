@@ -32,3 +32,4 @@
 *.app
 
 TerminalMenu/build/*
+mdcore-tests/build/*

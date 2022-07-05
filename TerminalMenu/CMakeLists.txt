@@ -11,7 +11,7 @@ include(FetchContent)
 FetchContent_Declare(
    mdcore
    GIT_REPOSITORY https://github.com/MaxDistructo/mdcore.git
-   GIT_TAG        f08b52a48e53c3c0c20a9395a8eac25c82e0df81  
+   GIT_TAG        496c97e845a1b2f82f255f483e182ef9995466e9  
 )
 FetchContent_MakeAvailable(mdcore)
 
