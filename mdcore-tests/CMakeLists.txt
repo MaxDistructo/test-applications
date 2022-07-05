@@ -13,15 +13,20 @@ FetchContent_Declare(
    GIT_REPOSITORY https://github.com/MaxDistructo/mdcore.git
    GIT_TAG        496c97e845a1b2f82f255f483e182ef9995466e9  
 )
-FetchContent_MakeAvailable(mdcore)
-
+FetchContent_Declare(
+   catch2
+   GIT_REPOSITORY https://github.com/catchorg/Catch2.git 
+   GIT_TAG        605a34765aa5d5ecbf476b4598a862ada971b0cc
+)
+FetchContent_MakeAvailable(mdcore catch2)
 
 #add_subdirectory(lib/mdcore-cpp)
 #find_package( Threads )
 #find_package(OpenSSL REQUIRED)
-target_link_libraries(mdcore-tests mdcore)
+target_link_libraries(mdcore-tests mdcore Catch2)
 target_include_directories(mdcore-tests
 	PUBLIC
 		${mdcore_SOURCE_DIR}/include
+      ${catch2_SOURCE_DIR}/src
 )
 set_property(TARGET mdcore-tests PROPERTY CXX_STANDARD 17)
