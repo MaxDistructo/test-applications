@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "Menu.h"
+#include <mdcore/std/terminal_menu.h>
 
 void hello_world();
 
